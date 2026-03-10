@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FLAMES Game</title>
+
+    <link rel="stylesheet" href="style.css" />
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <script src="https://unpkg.com/lucide@latest"></script>
+  </head>
+
+  <body
+    class="bg-neutral-950 text-neutral-200 min-h-screen flex items-center justify-center p-4"
+  >
+    <div class="app-container">
+      <header class="header">
+        <i data-lucide="flame" class="icon"></i>
+        <h1 class="title">FLAMES</h1>
+        <i data-lucide="flame" class="icon"></i>
+      </header>
+
+      <p class="subtitle">Discover Your Destiny</p>
+
+      <div class="card">
+        <div id="input-view">
+          <div class="input-group">
+            <label>Your Name</label>
+            <input id="name1" placeholder="Enter your name" />
+          </div>
+
+          <div class="heart">
+            <i data-lucide="heart"></i>
+          </div>
+
+          <div class="input-group">
+            <label>Crush Name</label>
+            <input id="name2" placeholder="Enter crush name" />
+          </div>
+
+          <button onclick="calculateFlames()" class="check-btn">
+            🔥 CHECK
+          </button>
+        </div>
+
+        <div id="calculating-view">
+          <i data-lucide="flame" class="calc-icon"></i>
+
+          <p class="calc-text">Consulting the Flames...</p>
+        </div>
+
+        <div id="result-view">
+          <div class="names">
+            <span id="res-name1"></span>
+            &
+            <span id="res-name2"></span>
+          </div>
+
+          <div class="result-box">
+            <div id="res-icon"></div>
+
+            <h2 id="res-title"></h2>
+
+            <p id="res-desc"></p>
+          </div>
+
+          <button onclick="resetGame()" class="play-btn">Play Again</button>
+        </div>
+      </div>
+
+      <footer class="footer">
+        Friends • Lovers • Affection • Marriage • Enemies • Siblings
+      </footer>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
